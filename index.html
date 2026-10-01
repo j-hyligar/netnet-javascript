@@ -4,11 +4,12 @@
   /* global nn */
 
   function tenPrint() {
-    const hue = nn.random(360)
-    const clr = nn.hsl(hue, 100, 20)
-    const chars = '─ │ ┌ ┐ └ ┘ ├ ┤ ┬ ┴ ┼'
+    const hue = nn.random(60)
+    const light = nn.random(60) + 10
+    const clr = nn.hsl(hue, 100, light)
+    const chars = ' ⮀ ⮁ ⮂ ⮃ ⮄ ⮅ ⮆ ⮇'
     let pattern = ''
-    nn.times(600, () => pattern += nn.random(chars))
+    nn.times(1260, () => pattern += nn.random(chars))
     nn.get('body')
       .content(pattern)
       .css('background', clr)
