@@ -1,9 +1,43 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>Untitled</title>
+    <title>netnet Date and Time Demo</title>
+    <meta name="jayden h" content="jayden h">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    
+
+  <script>
+
+    function onKawara () {
+      document.body.style.background = "#93C9BA"
+      document.body.style.height = '100vh'
+      document.body.style.display = 'grid'
+      document.body.style.justifyContent = 'center'
+      document.body.style.alignItems = 'center'
+
+      const d = new Date()
+      const day = d.getDate()
+      const months = [
+        'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+      ]
+      const m = d.getMonth()
+      const month = months[m]
+      const year = d.getFullYear()
+      const dateString = `${day} ${month}, ${year}`
+
+      const span = document.createElement('span')
+      span.textContent = dateString
+      span.style.color = '#E2E3AC'
+      span.style.fontSize = '3vw'
+      span.style.fontFamily = '"Times New Roman", serif'
+      document.body.appendChild(span)
+    }
+
+    window.addEventListener('load', onKawara)
+
+  </script>
+
   </body>
 </html>
